@@ -1,6 +1,6 @@
 <?php
-require_once 'leaf.class.php';
-require_once 'composite.class.php';
+require_once 'composite/leaf.class.php';
+require_once 'composite/composite.class.php';
 
 interface CompositeExample {
   // All public functions that should be defined for both leaf nodes and composites
