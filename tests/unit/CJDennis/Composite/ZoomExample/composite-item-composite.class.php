@@ -1,7 +1,7 @@
 <?php
 namespace CJDennis\Composite;
 
-require_once 'composite/composite.class.php';
+require_once 'cj-dennis/composite/composite.class.php';
 require_once 'composite-item.class.php';
 
 class CompositeItemComposite extends Composite implements CompositeItem {

@@ -1,7 +1,7 @@
 <?php
 namespace CJDennis\ChainOfResponsibility;
 
-require_once 'chain-of-responsibility/request-handler.class.php';
+require_once 'cj-dennis/chain-of-responsibility/request-handler.class.php';
 
 class RequestHandlerSeam extends RequestHandler {
   protected $can_handle_request = false;
