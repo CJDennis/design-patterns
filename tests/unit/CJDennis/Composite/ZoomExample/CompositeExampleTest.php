@@ -1,4 +1,6 @@
 <?php
+namespace CJDennis\Composite;
+
 require_once 'composite-example.php';
 
 class CompositeExampleTest extends \Codeception\Test\Unit {
@@ -23,18 +25,18 @@ class CompositeExampleTest extends \Codeception\Test\Unit {
     //     'Bar',
     //   ],
     // ]
-    $component = new CompositeExampleLeaf();
+    $component = new CompositeItemLeaf();
     $component->set_text('Foo');
-    $composite_component = new CompositeExampleComposite();
+    $composite_component = new CompositeItemComposite();
     $composite_component->add_child($component);
 
-    $component = new CompositeExampleLeaf();
+    $component = new CompositeItemLeaf();
     $component->set_text('Bar');
     $composite_component->add_child($component);
 
-    $component = new CompositeExampleLeaf();
+    $component = new CompositeItemLeaf();
     $component->set_text('Baz');
-    $root_component = new CompositeExampleComposite();
+    $root_component = new CompositeItemComposite();
     $root_component->add_child($component);
     $root_component->add_child($composite_component);
 
