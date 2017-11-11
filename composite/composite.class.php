@@ -2,6 +2,8 @@
 namespace CJDennis\Composite;
 
 require_once 'component.class.php';
+require_once 'component-children.class.php';
+require_once 'component-parent.class.php';
 
 class CompositeException extends \Exception {}
 
