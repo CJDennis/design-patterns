@@ -1,5 +1,5 @@
 <?php
-require_once 'composite-example.class.php';
+require_once 'composite-example.php';
 
 class CompositeExampleTest extends \Codeception\Test\Unit {
   /**
