@@ -1,7 +1,7 @@
 <?php
 namespace CJDennis\ChainOfResponsibility;
 
-require_once 'chain-of-responsibility-example.php';
+require_once 'examples/cj-dennis/chain-of-responsibility/chain-of-responsibility-example.php';
 
 class ChainOfResponsibilityExampleTest extends \Codeception\Test\Unit {
   /**

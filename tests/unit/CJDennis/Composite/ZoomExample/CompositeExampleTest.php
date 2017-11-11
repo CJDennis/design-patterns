@@ -1,7 +1,7 @@
 <?php
 namespace CJDennis\Composite;
 
-require_once 'composite-example.php';
+require_once 'examples/cj-dennis/composite/composite-example.php';
 
 class CompositeExampleTest extends \Codeception\Test\Unit {
   /**
