@@ -2,6 +2,7 @@
 namespace CJDennis\Composite;
 
 require_once 'cj-dennis/composite/leaf.class.php';
+require_once 'composite-seam.class.php';
 
 class LeafTest extends \Codeception\Test\Unit {
   /**
@@ -45,8 +46,9 @@ class LeafTest extends \Codeception\Test\Unit {
 
   public function testShouldAddToACompositeParent() {
     $component = new Leaf();
-    $parent_component = new Composite();
+    $parent_component = new CompositeSeam();
     $component->add_to_parent($parent_component);
+    $this->assertSame($component, $parent_component->get_child_seam(0));
   }
 
   public function testShouldThrowAnExceptionWhenTheComponentAlreadyHasAParent() {
@@ -68,9 +70,11 @@ class LeafTest extends \Codeception\Test\Unit {
 
   public function testShouldRemoveFromACompositeParent() {
     $component = new Leaf();
-    $parent_component = new Composite();
+    $parent_component = new CompositeSeam();
     $component->add_to_parent($parent_component);
+    $this->assertSame(1, $parent_component->count_children());
     $component->remove_from_parent($parent_component);
+    $this->assertSame(0, $parent_component->count_children());
   }
 
   public function testShouldThrowAnExceptionWhenGettingAChild() {
