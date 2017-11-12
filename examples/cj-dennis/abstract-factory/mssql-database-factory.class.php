@@ -5,7 +5,7 @@ require_once 'cj-dennis/abstract-factory/database-factory.class.php';
 require_once 'mssql-customer-model.class.php';
 require_once 'mssql-product-model.class.php';
 
-class MssqlDatabaseFactory extends DatabaseFactory {
+class MssqlDatabaseFactory implements DatabaseFactory {
   public function create_customer() {
     return new MssqlCustomerModel();
   }

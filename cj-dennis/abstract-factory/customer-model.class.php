@@ -1,8 +1,8 @@
 <?php
 namespace CJDennis\AbstractFactory;
 
-abstract class CustomerModel {
-  abstract function get_customer_name();
-  abstract function get_customer_address();
-  abstract function get_customer_orders();
+interface CustomerModel {
+  function get_customer_name();
+  function get_customer_address();
+  function get_customer_orders();
 }
